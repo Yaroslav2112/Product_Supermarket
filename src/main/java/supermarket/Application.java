@@ -14,7 +14,7 @@ public class Application {
         double sum = 0;
         Stage stage = WELCOME;
         String input = null;
-        Integer quentity = 0;
+        Integer quantity = 0;
 
 
         System.out.println(welcome);
@@ -42,7 +42,7 @@ public class Application {
                 }
             }
             else if (stage.equals(SALE)){
-                switch (input) {
+               switch (input) {
                     case "f":
                         System.out.println(food_assortment);
                         input = bufferedReader.readLine();
@@ -66,18 +66,19 @@ public class Application {
 
             }
             else if (stage.equals(FOOD)) {
-                switch (input) {
+              switch (input) {
                     case "b":
                         System.out.println(price_bread + bread_message);
                         try {
                             input = bufferedReader.readLine();
-                            quentity = Integer.parseInt(input);
-                            sum = sum + (quentity * price_bread);
+                            quantity = Integer.parseInt(input);
+                            sum = sum + (quantity * price_bread);
                             stage = OTHER_PRODUCT;
 
                         } catch (NumberFormatException e) {
                             System.out.print(error);
-                            stage = FOOD;
+                            input = "b";
+
                         }
                         break;
 
@@ -85,12 +86,12 @@ public class Application {
                         System.out.println(price_majonez + majonez_message);
                         try {
                             input = bufferedReader.readLine();
-                            quentity = Integer.parseInt(input);
-                            sum = sum + (quentity * price_majonez);
+                            quantity = Integer.parseInt(input);
+                            sum = sum + (quantity * price_majonez);
                             stage = OTHER_PRODUCT;
                         } catch (NumberFormatException e) {
                             System.out.print(error);
-                            stage = SALE;
+                            input = "m";
                         }
                         break;
 
@@ -98,12 +99,12 @@ public class Application {
                         System.out.println(price_kreker + kreker_message);
                         try {
                             input = bufferedReader.readLine();
-                            quentity = Integer.parseInt(input);
-                            sum = sum + (quentity * price_kreker);
+                            quantity = Integer.parseInt(input);
+                            sum = sum + (quantity * price_kreker);
                             stage = OTHER_PRODUCT;
                         } catch (NumberFormatException e) {
                             System.out.print(error);
-                            stage = SALE;
+                            input = "w";
                         }
                         break;
 
@@ -111,19 +112,146 @@ public class Application {
                         System.out.println(price_sausage + sausage_message);
                         try {
                             input = bufferedReader.readLine();
-                            quentity = Integer.parseInt(input);
-                            sum = sum + (quentity * price_sausage);
+                            quantity = Integer.parseInt(input);
+                            sum = sum + (quantity * price_sausage);
                             stage = OTHER_PRODUCT;
                         } catch (NumberFormatException e) {
                             System.out.print(error);
-                            stage = SALE;
+                            input = "u";
                         }
                         break;
                     case "q":
                         break;
                     default:
-                        System.out.println(incorrect_welcome);
-                        stage = SALE;
+                        System.out.println(incorrect_food);
+                        input = bufferedReader.readLine();
+                        stage = FOOD;
+                        break;
+                }
+            }
+            else if (stage.equals(BEVERAGE)) {
+                switch (input) {
+                    case "z":
+                        System.out.println(price_water + water_message);
+                        try {
+                            input = bufferedReader.readLine();
+                            quantity = Integer.parseInt(input);
+                            sum = sum + (quantity * price_water);
+                            stage = OTHER_PRODUCT;
+
+                        } catch (NumberFormatException e) {
+                            System.out.print(error);
+                            input = "z";
+                        }
+                        break;
+
+                    case "y":
+                        System.out.println(price_juice + juice_message);
+                        try {
+                            input = bufferedReader.readLine();
+                            quantity = Integer.parseInt(input);
+                            sum = sum + (quantity * price_juice);
+                            stage = OTHER_PRODUCT;
+                        } catch (NumberFormatException e) {
+                            System.out.print(error);
+                            input = "y";
+                        }
+                        break;
+
+                    case "s":
+                        System.out.println(price_beer + beer_message);
+                        try {
+                            input = bufferedReader.readLine();
+                            quantity = Integer.parseInt(input);
+                            sum = sum + (quantity * price_beer);
+                            stage = OTHER_PRODUCT;
+                        } catch (NumberFormatException e) {
+                            System.out.print(error);
+                            input = "s";
+                        }
+                        break;
+
+                    case "v":
+                        System.out.println(price_wine + wine_message);
+                        try {
+                            input = bufferedReader.readLine();
+                            quantity = Integer.parseInt(input);
+                            sum = sum + (quantity * price_wine);
+                            stage = OTHER_PRODUCT;
+                        } catch (NumberFormatException e) {
+                            System.out.print(error);
+                            input = "v";
+                        }
+                        break;
+                    case "q":
+                        break;
+                    default:
+                        System.out.println(incorrect_beverage);
+                        input = bufferedReader.readLine();
+                        stage = BEVERAGE;
+                        break;
+                }
+            }
+            else if (stage.equals(ELECTRICS)) {
+                switch (input) {
+                    case "d":
+                        System.out.println(price_mobile + mobile_message);
+                        try {
+                            input = bufferedReader.readLine();
+                            quantity = Integer.parseInt(input);
+                            sum = sum + (quantity * price_mobile);
+                            stage = OTHER_PRODUCT;
+
+                        } catch (NumberFormatException e) {
+                            System.out.print(error);
+                            input = "d";
+                        }
+                        break;
+
+                    case "g":
+                        System.out.println(price_tv + tv_message);
+                        try {
+                            input = bufferedReader.readLine();
+                            quantity = Integer.parseInt(input);
+                            sum = sum + (quantity * price_tv);
+                            stage = OTHER_PRODUCT;
+                        } catch (NumberFormatException e) {
+                            System.out.print(error);
+                            input = "g";
+                        }
+                        break;
+
+                    case "j":
+                        System.out.println(price_freeger + freeger_message);
+                        try {
+                            input = bufferedReader.readLine();
+                            quantity = Integer.parseInt(input);
+                            sum = sum + (quantity * price_freeger);
+                            stage = OTHER_PRODUCT;
+                        } catch (NumberFormatException e) {
+                            System.out.print(error);
+                            input = "j";
+                        }
+                        break;
+
+                    case "l":
+                        System.out.println(price_laptop + laptop_message);
+                        try {
+                            input = bufferedReader.readLine();
+                            quantity = Integer.parseInt(input);
+                            sum = sum + (quantity * price_laptop);
+                            stage = OTHER_PRODUCT;
+                        } catch (NumberFormatException e) {
+                            System.out.print(error);
+                            input = "l";
+                        }
+                        break;
+                    case "q":
+                        break;
+                    default:
+                        System.out.println(incorrect_electronics);
+                        input = bufferedReader.readLine();
+                        stage = ELECTRICS;
                         break;
                 }
             }
@@ -141,32 +269,12 @@ public class Application {
                         input = bufferedReader.readLine();
                         stage = SALE;
                         break;
+                    case "q":
+                        break;
                     default:
                         System.out.println(incorrect_welcome);
                         stage = OTHER_PRODUCT;
                         break;}
-
-//
-//
-//
-//
-//                        stage = FOOD;
-//                        break;
-//                    case "m":
-//                        System.out.println(beverage_assortment);
-//                        stage = BEVERAGE;
-//                        break;
-//                    case "w":
-//                        System.out.println(electrics_assortment);
-//                        stage = ELECTRICS;
-//                        break;
-//                    case "u":
-//                        System.out.println(electrics_assortment);
-//                        stage = ELECTRICS;
-//                        break;
-//                    default:
-//                        stage = WELCOME;
-//                        break;
                 }
 
         } while (!input.equals("q"));

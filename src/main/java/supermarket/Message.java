@@ -8,6 +8,12 @@ public class Message {
     public static String bay = "Раді були Вас бачити в нашому супермаркеті. До побачення";
     public static String incorrect_welcome = "Некоректне введення символу. Ви можете ввести тільки f, n, r або q. " +
             "Для виходу нажміть q";
+    public static String incorrect_food = "Некоректне введення символу. Ви можете ввести тільки b, m, w, u або q. " +
+            "Для виходу нажміть q";
+    public static String incorrect_beverage = "Некоректне введення символу. Ви можете ввести тільки z, y, s, v або q. " +
+            "Для виходу нажміть q";
+    public static String incorrect_electronics = "Некоректне введення символу. Ви можете ввести тільки d, g, j, l або q. " +
+            "Для виходу нажміть q";
     public static String food_assortment = "У відділі продуктів харчування у нас є хліб (введіть b), майонез (введіть m), " +
             " крекер(введіть w), ковбаса (введіть u). Зробіть свій вибір. Для виходу нажміть q.";
     public static String beverage_assortment = "У відділі напоїв у нас є вода (введіть z), сік (введіть y)," +
@@ -18,6 +24,16 @@ public class Message {
     public static String majonez_message = " грн. - вартість майонезу. Введіть скільки майонезу Ви хочете купити.";
     public static String kreker_message = " грн. - вартість крекеру. Введіть скільки крекеру Ви хочете купити.";
     public static String sausage_message = " грн. - вартість кг ковбаси. Введіть скільки кг ковбаси Ви хочете купити.";
+    public static String water_message = " грн. - вартість пляшки води. Введіть скільки пляшок Ви хочете купити.";
+    public static String juice_message = " грн. - вартість пачки соку. Введіть скільки пачок соку Ви хочете купити.";
+    public static String beer_message = " грн. - вартість пляшки пива. Введіть скільки пляшок пива Ви хочете купити.";
+    public static String wine_message = " грн. - вартість пляшки вина. Введіть скільки пляшок вина Ви хочете купити.";
+    public static String mobile_message = " грн. - вартість мобільного телефону. Введіть скільки мобільних телефонів" +
+            " Ви хочете купити.";
+    public static String tv_message = " грн. - вартість телевізора. Введіть скільки телевізорів Ви хочете купити.";
+    public static String freeger_message = " грн. - вартість холодильника. Введіть скільки холодильників" +
+            " Ви хочете купити.";
+    public static String laptop_message = " грн. - вартість ноутбука. Введіть скільки ноутбуків Ви хочете купити.";
     public static String error = "невірно введена кількість";
     public static String other_product = "Якщо Ви бажаєте купити інший продукт в цьому відділі нажміть s, " +
             "якщо Ви бажаєте купити продукт в іншому відділі нажміть d, якщо Ви бажаєте закінчити покупки нажміть q";
